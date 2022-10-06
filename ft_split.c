@@ -43,7 +43,8 @@ char	**insert(char const *s, char c, int slot, char **arr)
 	i = 0;
 	j = 0;
 	count = 0;
-	while (i <= slot)
+	arr[slot] = NULL;
+	while (i < slot)
 	{
 		while (s[count] == c)
 			count++;
@@ -56,8 +57,11 @@ char	**insert(char const *s, char c, int slot, char **arr)
 		arr[i][j] = '\0';
 		j = 0;
 		i++;
+		if (i == slot)
+			arr[i] = NULL;
 	}
 	arr[i] = NULL;
+	// printf("slot:%s\n", arr[slot]);
 	return (arr);
 }
 
@@ -95,6 +99,8 @@ char	**ft_split(char const *s, char c)
 	int		slot;
 	size_t	i;
 	char	**arr;
+	char	**one;
+	char	**two;
 
 	slot = 0;
 	count = 0;
@@ -105,6 +111,7 @@ char	**ft_split(char const *s, char c)
 	if (!arr)
 		return (NULL);
 	arr = allocate(s, c, arr);
+	printf("%s\n", arr[0]);
 	return (arr);
 }
 
