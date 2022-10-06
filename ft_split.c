@@ -12,16 +12,14 @@
 
 #include "libft.h"
 
-char	**get_mal(char const *s, char c)
+char **get_mal(char const *s, char c)
 {
-	int		count;
-	int		slot;
-	int		i;
-	char	**arr;
+	int slot;
+	int i;
+	char **arr;
 
-	count = 0;
 	i = 1;
-	slot = 0;
+	slot = 1;
 	while (s[i])
 	{
 		if (s[i - 1] == c && s[i] != c)
@@ -29,16 +27,15 @@ char	**get_mal(char const *s, char c)
 		i++;
 	}
 	slot++;
-	arr = (char **) malloc(slot * sizeof(char *));
+	arr = (char **)malloc(slot * sizeof(char *));
 	return (arr);
 }
 
-char	**insert(char const *s, char c, int slot, char **arr)
+char **insert(char const *s, char c, int slot, char **arr)
 {
-	int	i;
-	int	j;
-	int	count;
-	char	*str;
+	int i;
+	int j;
+	int count;
 
 	i = 0;
 	j = 0;
@@ -57,19 +54,16 @@ char	**insert(char const *s, char c, int slot, char **arr)
 		arr[i][j] = '\0';
 		j = 0;
 		i++;
-		if (i == slot)
-			arr[i] = NULL;
 	}
 	arr[i] = NULL;
-	// printf("slot:%s\n", arr[slot]);
 	return (arr);
 }
 
-char	**allocate(char const *s, char c, char **arr)
+char **allocate(char const *s, char c, char **arr)
 {
-	int		count;
-	int		slot;
-	size_t	i;
+	int count;
+	int slot;
+	size_t i;
 
 	i = 0;
 	count = 0;
@@ -83,7 +77,7 @@ char	**allocate(char const *s, char c, char **arr)
 		}
 		if (count > 0)
 		{
-			arr[slot] = (char *) malloc((count  + 1) * sizeof(char));
+			arr[slot] = (char *)malloc((count + 1) * sizeof(char));
 			slot++;
 			count = 0;
 		}
@@ -93,32 +87,23 @@ char	**allocate(char const *s, char c, char **arr)
 	return (arr);
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	int		count;
-	int		slot;
-	size_t	i;
-	char	**arr;
-	char	**one;
-	char	**two;
+	char **arr;
 
-	slot = 0;
-	count = 0;
-	i = 0;
 	if (!s)
 		return (NULL);
 	arr = get_mal(s, c);
 	if (!arr)
 		return (NULL);
 	arr = allocate(s, c, arr);
-	printf("%s\n", arr[0]);
 	return (arr);
 }
 
-int	main(void)
+/*int main(void)
 {
-	char	*str = "tripouille  42  ";
-	char	c = ' ';
+	char *str = "tripouille  42  ";
+	char c = ' ';
 	// char	*str = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
 	// char	c = ' ';
 	// char	*str = "tripouille";
@@ -126,7 +111,7 @@ int	main(void)
 
 	// char	*str = strdup("tripouille");
 	// char	c = ' ';
-	char	**ret;
+	char **ret;
 
 	ret = ft_split(str, c);
 	printf("ret0: %s\n", ret[0]);
@@ -138,4 +123,4 @@ int	main(void)
 	// printf("ret0: %s\n", ret[0]);
 	// printf("ret1: %s\n", ret[1]);
 	// printf("ret: %s\n", ret[2]);
-}
+}*/

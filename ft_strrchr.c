@@ -15,11 +15,9 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int				i;
-	int				j;
 	unsigned char	cha;
 
 	i = ft_strlen(str);
-	j = 0;
 	cha = (unsigned char) c;
 	while (i >= 0)
 	{

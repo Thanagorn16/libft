@@ -38,11 +38,9 @@ void	ft_cat(char *c1, const char *c2, size_t dstsize)
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
 	size_t	total;
 
 	i = 0;
-	j = 0;
 	if (!dst && !src)
 		return (0);
 	if (dstsize == 0)
