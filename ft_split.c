@@ -22,16 +22,20 @@ char	**get_mal(char const *s, char c)
 	count = 0;
 	i = 1;
 	slot = 0;
-
-	while (s[i] && ft_strlen(s) != 0)
+	if (s[0] != '\0')
 	{
-		if (s[0] != c && i == 1)
-			slot++;
-		if (s[i - 1] == c && s[i] != c)
-			slot++;
-		i++;
+		while (s[i] && ft_strlen(s) != 0)
+		{
+			if (s[0] != c && i == 1)
+				slot++;
+			if (s[i - 1] == c && s[i] != c)
+				slot++;
+			i++;
+		}
+		slot++;
 	}
-	slot++;
+	else
+		slot = 1;
 	arr = (char **) malloc(slot * sizeof(char *));
 	return (arr);
 }
@@ -72,7 +76,7 @@ char	**allocate(char const *s, char c, char **arr)
 	i = 0;
 	count = 0;
 	slot = 0;
-	while (i < ft_strlen(s) )
+	while (i < ft_strlen(s))
 	{
 		while (s[i] != c && s[i] != '\0')
 		{
@@ -81,8 +85,7 @@ char	**allocate(char const *s, char c, char **arr)
 		}
 		if (count > 0)
 		{
-			// arr[slot] = (char *) malloc((count  + 1) * sizeof(char));
-			arr[slot] = (char *) malloc(count  + 1);
+			arr[slot] = (char *) malloc(count + 1);
 			slot++;
 			count = 0;
 		}
@@ -110,16 +113,15 @@ char	**ft_split(char const*s, char c)
 	arr = allocate(s, c, arr);
 	return (arr);
 }
-/*
-int	main(void)
+
+/*int	main(void)
 {
-	char	*str = "  tripouille  42  ";
-	char	c = ' ';
+	// char	*str = "  tripouille  42  ";
+	// char	c = ' ';
 	// char	*str = " tripouille";
 	// char	c = ' ';
-	// char	*str = "";
-	// char	c = 'z';
-	// char	*str = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	char	*str = "";
+	char	c = 'z';
 	// char	c = ' ';
 	// char	*str = "tripouille";
 	// char	c = 0;
@@ -129,27 +131,10 @@ int	main(void)
 	char	**ret;
 
 	ret = ft_split(str, c);
-
 	int i = 0;
-	// while (i < 10)
-	// {
-	// 	printf("this is ret ==> [%s]\n", ret[i]);
-	// 	i++;
-	// }
 	printf("ret0: |%s|\n", ret[0]);
-	printf("ret0: |%s|\n", ret[1]);
-	printf("ret0: |%s|\n", ret[2]);
-	printf("ret0: |%s|\n", ret[3]);
-	free(ret);
-	// printf("ret1: |%s|\n", ret[1]);
-	// printf("ret2: %s\n", ret[2]);
-	// printf("ret3: %s\n", ret[3]);
-	// printf("ret4: %s\n", ret[4]);
-	// puts("-----------");
-	// free(ret[0]);
+	// printf("ret0: |%s|\n", ret[1]);
+	// printf("ret0: |%s|\n", ret[2]);
+	// printf("ret0: |%s|\n", ret[3]);
 	// free(ret);
-	// printf("ret0: %s\n", ret[0]);
-	// printf("ret1: %s\n", ret[1]);
-	// printf("ret: %s\n", ret[2]);
-}
-*/
+}*/
