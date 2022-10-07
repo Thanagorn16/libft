@@ -24,7 +24,7 @@ int	make_len(int n)
 	int	len;
 
 	len = 0;
-	if (len <= 0)
+	if (n <= 0)
 		len++;
 	while (n != 0)
 	{
@@ -44,22 +44,20 @@ char	*ft_itoa(int n)
 	n2 = n;
 	len = make_len(n);
 	nev = make_nev(n);
-	ret = (char *) malloc(sizeof(char) * (len + 1));
+	ret = malloc(sizeof(char) * (len + 1));
 	n2 *= nev;
 	if (!ret)
 		return (NULL);
 	ret[len--] = '\0';
 	if (n2 == 0)
 		ret[len] = '0';
-	if (nev == -1)
-		ret[0] = '-';
-	else
-		len -= 1;
 	while (n2 > 0)
 	{
-		ret[len--] = (n2 % 10) + '0';
+		ret[len--] = n2 % 10 + '0';
 		n2 /= 10;
 	}
+	if (nev == -1)
+		ret[len] = '-';
 	return (ret);
 }
 
@@ -68,7 +66,12 @@ char	*ft_itoa(int n)
 	int	i;
 	char	*ret;
 
-	i = 123456;
-	ret = ft_itoa(i);
-	printf("%s\n", ret);
+	i = 9;
+	printf("here:%d\n", i % 10);
+	// ret = ft_itoa(i);
+	// puts("---------");
+	// printf("ret:%s\n", ret);
+	// printf("%c\n", ret[0]);
+	// printf("%c\n", ret[1]);
+	// printf("%c\n", ret[2]);
 }*/
