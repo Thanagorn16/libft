@@ -116,12 +116,20 @@ char	**ft_split(char const*s, char c)
 
 /*int	main(void)
 {
+<<<<<<< HEAD
 	// char	*str = "  tripouille  42  ";
 	// char	c = ' ';
 	// char	*str = " tripouille";
 	// char	c = ' ';
 	char	*str = "";
 	char	c = 'z';
+=======
+	char *str = "tripouille  42  ";
+	char c = ' ';
+	// char *str = "";
+	// char c = 'z';
+	// char	*str = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+>>>>>>> 4fff1b6 (pull)
 	// char	c = ' ';
 	// char	*str = "tripouille";
 	// char	c = 0;
