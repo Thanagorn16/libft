@@ -21,21 +21,30 @@ SRCS = ft_atoi.c ft_isascii.c ft_memcmp.c ft_strchr.c ft_strlen.c \
 				ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 				ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_split.c
 
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+
 OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
 all: $(NAME)
 
-%o: %c
+%o:%c
 	gcc $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
+bonus: $(NAME) $(BONUS_OBJS)
+	ar -rcs $(NAME) $(BONUS_OBJS)
+
 clean:
 	rm -f $(OBJS)
+	rm -f $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all re bonus

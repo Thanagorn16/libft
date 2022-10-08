@@ -35,13 +35,11 @@ char	*creat_sub_str(char const *str, unsigned int start, size_t len, char *s)
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	size_t	i;
 	char	*s;
 	size_t	s_len;
 
 	if (!str)
 		return (NULL);
-	i = 0;
 	s_len = ft_strlen(str);
 	if (start >= s_len || (start == 0 && len == 0))
 	{
