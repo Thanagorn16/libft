@@ -35,11 +35,13 @@ char	*creat_sub_str(char const *str, unsigned int start, size_t len, char *s)
 
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
+	size_t	i;
 	char	*s;
 	size_t	s_len;
 
 	if (!str)
 		return (NULL);
+	i = 0;
 	s_len = ft_strlen(str);
 	if (start >= s_len || (start == 0 && len == 0))
 	{
@@ -47,6 +49,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		*s = '\0';
 		return (s);
 	}
+	if (len == s_len && start == len - 1)
+		len = 1;
 	if (len > s_len)
 		len = s_len;
 	s = (char *)malloc(len + 1);
@@ -56,16 +60,18 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	return (s);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
     // char    str[] = "tripouille";
-    char    str[] = "lorem ipsum dolor sit amet";
+    // char    str[] = "lorem ipsum dolor sit amet";
+    char    str[] = "0123456789";
     char    *ret;
 
-    ret = ft_substr(str, 7, 0);
+    ret = ft_substr(str, 9, 10);
     // printf("%d\n", strcmp(ret, "tripouille"));
     // printf("str size: %lu\n", sizeof(str));
     // printf("ret size: %lu\n", sizeof(ret));
-    printf("len: %lu\n", strlen(ret));
+    printf("ret: %lu\n", strlen(ret));
     puts(ret);
 }*/
