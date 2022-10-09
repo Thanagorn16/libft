@@ -14,12 +14,10 @@
 
 char	**get_mal(char const *s, char c)
 {
-	int		count;
 	int		slot;
 	int		i;
 	char	**arr;
 
-	count = 0;
 	i = 1;
 	slot = 0;
 	if (s[0] != '\0')
@@ -97,14 +95,8 @@ char	**allocate(char const *s, char c, char **arr)
 
 char	**ft_split(char const*s, char c)
 {
-	int		count;
-	int		slot;
-	size_t	i;
 	char	**arr;
 
-	slot = 0;
-	count = 0;
-	i = 0;
 	if (!s)
 		return (NULL);
 	arr = get_mal(s, c);

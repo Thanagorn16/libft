@@ -15,10 +15,8 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
-	size_t	src_length;
 
 	index = 0;
-	src_length = 0;
 	while (src[index] != '\0' && index != size)
 	{
 		dst[index] = src[index];
@@ -49,14 +47,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	// r = strlcpy(a, cc, 10);
 	// printf("ret: %d\n", r);
-	// printf("str: %s\n", a); 
+	// printf("str: %s\n", a);
 	// printf("here: %c\n", a[strlen(cc) + 1]);
 
 	// puts("-----------------");
 
 	c = ft_strlcpy(a, cc, 10);
 	printf("ret: %d\n", c);
-	printf("str: %s\n", a); 
+	printf("str: %s\n", a);
 	// printf("here: %c\n", a[strlen(cc) + 1]);
 	return (0);
 }*/

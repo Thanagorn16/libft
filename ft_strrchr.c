@@ -15,11 +15,9 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int				i;
-	int				j;
 	unsigned char	cha;
 
 	i = ft_strlen(str);
-	j = 0;
 	cha = (unsigned char) c;
 	while (i >= 0)
 	{
@@ -30,7 +28,7 @@ char	*ft_strrchr(const char *str, int c)
 	return (NULL);
 }
 
-/*int main(void) 
+/*int main(void)
 {
     char    str[] = "tripouille";
     char    str2[] = "ltripouiel";
@@ -44,6 +42,6 @@ char	*ft_strrchr(const char *str, int c)
     myret = ft_strrchr(str, 't');
     printf("here: %s\n", myret);
 	// printf("len: %lu\n", strlen(myret));
-    
+
     return (0);
 }*/
