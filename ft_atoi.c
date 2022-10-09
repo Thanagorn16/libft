@@ -38,18 +38,19 @@ int	ft_atoi(const char *str)
 	return (temp);
 }
 
-// int main(void)
-// {
-//     const char  *str = "    -123124 321";
-// 	// char	escape[] = {9, 10, 11, 12, 13, 0};
-//     int    ptr;
-//     int    myptr;
+/*int main(void)
+{
+    // const char  *str = "    -123124 321";
+	// char	escape[] = {9, 10, 11, 12, 13, 0};
+    int    ptr;
+    int    myptr;
 
-//     // ptr = atoi("+42lyon");
-//     ptr = atoi(str);
-//     printf("atoi\t:%d\n", ptr);
-//     puts("-------------");
-// 	myptr = ft_atoi(str);
-//     // myptr = ft_atoi("+42lyon");
-//     printf("ft_atoi\t:%d\n", myptr);
-// }
+    // ptr = atoi("+42lyon");
+    ptr = atoi(str);
+    printf("atoi\t:%d\n", ptr);
+    puts("-------------");
+	myptr = ft_atoi(str);
+    // myptr = ft_atoi("+42lyon");
+    printf("ft_atoi\t:%d\n", myptr);
+}
+*/
