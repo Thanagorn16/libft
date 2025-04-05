@@ -112,8 +112,51 @@ Each .c file implements one or more custom standard functions:
 
 # 📚 Function Overview Table
 
-|Function|Description|
-|---|-----------------|
-|R1c1| 123123 | 
+| Function             | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| `ft_atoi`            | Converts a string to an integer.                                            |
+| `ft_bzero`           | Sets a block of memory to zero.                                             |
+| `ft_calloc`          | Allocates memory and initializes it to zero.                               |
+| `ft_isalnum`         | Checks if a character is alphanumeric.                                     |
+| `ft_isalpha`         | Checks if a character is alphabetic.                                       |
+| `ft_isascii`         | Checks if a character is a valid ASCII character.                          |
+| `ft_isdigit`         | Checks if a character is a digit.                                          |
+| `ft_isprint`         | Checks if a character is printable.                                        |
+| `ft_itoa`            | Converts an integer to a string.                                           |
+| `ft_memchr`          | Searches memory for a byte.                                                |
+| `ft_memcmp`          | Compares two blocks of memory.                                             |
+| `ft_memcpy`          | Copies memory from source to destination.                                  |
+| `ft_memmove`         | Safely copies memory, including overlapping areas.                         |
+| `ft_memset`          | Fills a block of memory with a specified value.                            |
+| `ft_putchar_fd`      | Writes a character to a file descriptor.                                   |
+| `ft_putendl_fd`      | Writes a string followed by a newline to a file descriptor.                |
+| `ft_putnbr_fd`       | Writes an integer to a file descriptor.                                    |
+| `ft_putstr_fd`       | Writes a string to a file descriptor.                                      |
+| `ft_split`           | Splits a string by a delimiter into an array of strings.                   |
+| `ft_strchr`          | Finds the first occurrence of a character in a string.                     |
+| `ft_strdup`          | Duplicates a string.                                                       |
+| `ft_striteri`        | Applies a function to each character of a string using its index.          |
+| `ft_strjoin`         | Joins two strings into one.                                                |
+| `ft_strlcat`         | Concatenates strings with buffer size check.                               |
+| `ft_strlcpy`         | Copies strings with buffer size check.                                     |
+| `ft_strlen`          | Calculates the length of a string.                                         |
+| `ft_strmapi`         | Creates a new string by applying a function to each character.             |
+| `ft_strncmp`         | Compares two strings up to a specified number of characters.               |
+| `ft_strnstr`         | Locates a substring within a string, within a max length.                  |
+| `ft_strrchr`         | Finds the last occurrence of a character in a string.                      |
+| `ft_strtrim`         | Trims characters from the beginning and end of a string.                   |
+| `ft_substr`          | Extracts a substring from a string.                                        |
+| `ft_tolower`         | Converts a character to lowercase.                                         |
+| `ft_toupper`         | Converts a character to uppercase.                                         |
+| `ft_lstnew`          | Creates a new linked list element.                                         |
+| `ft_lstadd_front`    | Adds a new element at the beginning of a list.                             |
+| `ft_lstadd_back`     | Adds a new element at the end of a list.                                   |
+| `ft_lstdelone`       | Deletes a single element from a list.                                      |
+| `ft_lstclear`        | Deletes and frees all elements of a list.                                  |
+| `ft_lstiter`         | Applies a function to each element in a list.                              |
+| `ft_lstmap`          | Creates a new list by applying a function to each element of another list. |
+| `ft_lstlast`         | Returns the last element of a list.                                        |
+| `ft_lstsize`         | Returns the number of elements in a list.                                  |
+
 
 
