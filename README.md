@@ -24,12 +24,6 @@ This library includes:
 - Understanding undefined behaviors in C standard functions
 - Recreating complex functions like `ft_split`, `ft_lstmap`, and `ft_itoa` from scratch
 
-### 🔮 Future Features
-
-- Additional data structure implementations (e.g., stack, queue)
-- Extended utility functions (e.g., custom printf)
-- Performance benchmarking utilities
-
 ---
 
 ## 📖 Table of Contents
@@ -38,6 +32,7 @@ This library includes:
 - [How to Install and Run the Project](#how-to-install-and-run-the-project)
 - [How to Use the Project](#how-to-use-the-project)
 - [Library Structure & File Descriptions](#library-structure--file-descriptions)
+- [Function Overview Table](#function-overview-table)
 
 ---
 
